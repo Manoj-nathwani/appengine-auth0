@@ -1,0 +1,20 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+service: website
+
+handlers:
+- url: /static
+  static_dir: static
+- url: /.*
+  script: main.app
+
+env_variables:
+  DEBUG: True
+  DOMAIN: 'http://localhost:8080'
+  SECRET_KEY: 'CHANGE_ME'
+  AUTH0_CLIENT_ID: 'CHANGE_ME'
+  AUTH0_CLIENT_SECRET: 'CHANGE_ME'
+  AUTH0_DOMAIN: 'CHANGE_ME'
+  AUTH0_LOGO: 'CHANGE_ME'
+  AUTH0_COLOUR_SCHEME: '#428bca'

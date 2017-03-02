@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h1 class="panel-title">auth0 user</h1>
+    </div>
+
+    <div class="panel-body">
+        <img src="{{ user.picture }}" height="100"/>
+        {{ user.name }}
+    </div>
+
+    <table class="table">
+        {% for key, value in user.iteritems() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
