@@ -96,9 +96,9 @@ class DashboardHandler(BaseHandler):
 
 app = webapp2.WSGIApplication(
     [
-        ('/login', LoginHandler),
+        ('/login', LoginHandler),        
+        ('/callback', CallbackHandler),
         ('/', DashboardHandler),
-        ('/callback', CallbackHandler)
     ],
     debug=os.environ['DEBUG'],
     config={
